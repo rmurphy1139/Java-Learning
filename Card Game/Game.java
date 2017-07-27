@@ -1,10 +1,10 @@
 public class Game {
 
-public static void main (String[] args){
+    public static void main(String[] args) {
 
-CardPicker cardpicker = new CardPicker();
+        CardPicker cardpicker = new CardPicker();
 
-System.out.println(cardpicker.pick());
+        System.out.println(cardpicker.pick());
 
-	}
+    }
 }

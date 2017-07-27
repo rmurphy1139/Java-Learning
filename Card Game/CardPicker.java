@@ -4,7 +4,7 @@ public Card pick(){
 	
 	Deck deck = new Deck();
 	
-	return deck.card;
+	return deck.getDeck()[3];
 	
 	
 }
