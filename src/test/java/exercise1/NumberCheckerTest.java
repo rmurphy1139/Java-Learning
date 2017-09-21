@@ -18,7 +18,7 @@ public class NumberCheckerTest {
     @Test
     public void should_return_false_for_4_being_odd() {
         final NumberChecker numberChecker = new NumberChecker();
-        final boolean isOdd = numberChecker.isOdd(5);
+        final boolean isOdd = numberChecker.isOdd(4);
 
         assertThat("4 is not odd", isOdd, is(false));
     }

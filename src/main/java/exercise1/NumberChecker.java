@@ -3,6 +3,13 @@ package exercise1;
 public class NumberChecker {
 
     public boolean isOdd(int number) {
-        return true;
+        int i = number % 2;
+        if (i == 0) {
+            return false;
+
+        } else {
+            return true;
+        }
     }
 }
+
