@@ -6,7 +6,7 @@ public class SumOfNumbers {
 
         int y = 0;
 
-        for (int x = 0; x <= num; x++)
+        for (int x = 1; x <= num; x++)
         {
             y += x;
 
