@@ -1,27 +1,27 @@
 package exercise4;
 
 public class GameScore {
-    private Score Player1Score;
-    private Score Player2Score;
+    private Score player1Score;
+    private Score player2Score;
 
     public GameScore(Score player1Score, Score player2Score) {
-        Player1Score = player1Score;
-        Player2Score = player2Score;
+        this.player1Score = player1Score;
+        this.player2Score = player2Score;
     }
 
     public Score getPlayer1Score() {
-        return Player1Score;
+        return player1Score;
     }
 
     public void setPlayer1Score(Score player1Score) {
-        Player1Score = player1Score;
+        this.player1Score = player1Score;
     }
 
     public Score getPlayer2Score() {
-        return Player2Score;
+        return player2Score;
     }
 
     public void setPlayer2Score(Score player2Score) {
-        Player2Score = player2Score;
+        this.player2Score = player2Score;
     }
 }
