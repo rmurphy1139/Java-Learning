@@ -5,7 +5,5 @@ public enum Score {
     FIFTEEN,
     THIRTY,
     FORTY,
-    ADVANTAGE,
-    DUECE,
-    WIN
+    FIFTY
 }
