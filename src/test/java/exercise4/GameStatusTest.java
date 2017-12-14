@@ -51,6 +51,20 @@ public class GameStatusTest {
         setScoresAndAssert(LOVE, FIFTY, WIN_P2);
     }
 
+    @Test
+    public void game_should_be_duece_when_score_is_40_40() throws Exception {
+        setScoresAndAssert(FORTY, FORTY, DUECE);
+    }
+
+    @Test
+    public void game_should_be_ADVP1_when_at_50_40() throws Exception {
+        setScoresAndAssert(FIFTY, FORTY, ADVANTAGE_P1);
+    }
+
+    @Test
+    public void game_should_be_ADVP2_when_at_40_50() throws Exception {
+        setScoresAndAssert(FORTY, FIFTY, ADVANTAGE_P2);
+    }
 
     private void setScoresAndAssert(Score player1Score, Score player2Score, GameState expectedGameState) {
         GameStatus gameStatus = new GameStatus(player1Score, player2Score);

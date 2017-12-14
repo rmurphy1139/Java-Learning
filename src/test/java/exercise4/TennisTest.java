@@ -182,5 +182,23 @@ public class TennisTest {
         assertThat("Player 2 score should be forty", updatedGameStatus.getPlayer2Score(), is(FORTY));
     }
 
+    @Test
+    public void score_should_be_FIFTY_FORTY_when_player1_scores() {
+        gameStatus = new GameStatus(FORTY, FORTY);
+        GameStatus updatedGameStatus = tennis.calculateScore(gameStatus, Player1);
 
+        assertThat("Game should be advantage P1", updatedGameStatus.calculateGameState(), is(ADVANTAGE_P1));
+        assertThat("Player 1 score should be fifty", updatedGameStatus.getPlayer1Score(), is(FIFTY));
+        assertThat("Player 2 score should be forty", updatedGameStatus.getPlayer2Score(), is(FORTY));
+    }
+
+    @Test
+    public void score_should_be_FORTY_FIFTY_when_player2_scores() {
+        gameStatus = new GameStatus(FORTY, FORTY);
+        GameStatus updatedGameStatus = tennis.calculateScore(gameStatus, Player2);
+
+        assertThat("Game should be advantage P2", updatedGameStatus.calculateGameState(), is(ADVANTAGE_P2));
+        assertThat("Player 1 score should be forty", updatedGameStatus.getPlayer1Score(), is(FORTY));
+        assertThat("Player 2 score should be fifty", updatedGameStatus.getPlayer2Score(), is(FIFTY));
+    }
 }

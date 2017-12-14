@@ -13,11 +13,20 @@ public class GameStatus {
     }
 
     public GameState calculateGameState() {
+        if (player1Score == FIFTY && player2Score == FORTY) {
+            return ADVANTAGE_P1;
+        }
+        if (player1Score == FORTY && player2Score == FIFTY) {
+            return ADVANTAGE_P2;
+        }
         if (player1Score == FIFTY) {
             return WIN_P1;
         }
         if (player2Score == FIFTY) {
             return WIN_P2;
+        }
+        if (player1Score == FORTY && player2Score == FORTY) {
+            return DUECE;
         }
         return IN_PROGRESS;
     }

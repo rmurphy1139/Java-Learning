@@ -13,6 +13,9 @@ public class Tennis {
             if (currentGameStatus.getPlayer1Score() == THIRTY) {
                 return new GameStatus(FORTY, currentGameStatus.getPlayer2Score());
             }
+            if (currentGameStatus.getPlayer1Score() == FORTY) {
+                return new GameStatus(FIFTY, currentGameStatus.getPlayer2Score());
+            }
             else {
                 return new GameStatus(FIFTEEN, currentGameStatus.getPlayer2Score());
             }
@@ -24,6 +27,9 @@ public class Tennis {
             }
             if (currentGameStatus.getPlayer2Score() == THIRTY) {
                 return new GameStatus(currentGameStatus.getPlayer1Score(), FORTY);
+            }
+            if (currentGameStatus.getPlayer2Score() == FORTY) {
+                return new GameStatus(currentGameStatus.getPlayer1Score(), FIFTY);
             }
             else {
                 return new GameStatus(currentGameStatus.getPlayer1Score(), FIFTEEN);
